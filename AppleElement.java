@@ -6,11 +6,20 @@ public class AppleElement extends BoardComponent {
         setIcon(symbol);
     }
  
-    public void addRandomApple(Board screen, AppleElement apple) {
+    public void addRandomApple(Board screen, AppleElement apple, SnakeElement snake) {
+    	
+    	int x;
+    	int y;
+    	
+    	while(true) {
+    		 x = (int) (((Math.random()) * (screen.getBoardWidth() - 1)));
+    		 y = (int) (((Math.random()) * (screen.getBoardHeight() - 1)));
+    		 
+    		 if((snake.isBody(x, y)== false) && (snake.isHead(x, y)==false)) {
+    			 break;
+    		 }
+    	}
          
-        int x = (int) (((Math.random()) * (screen.getBoardWidth() - 1)));
-        int y = (int) (((Math.random()) * (screen.getBoardHeight() - 1)));
- 
         if(x==0)
         {
             x = 2;
