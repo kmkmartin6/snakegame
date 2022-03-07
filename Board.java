@@ -49,4 +49,8 @@ public class Board {
     public void setObjectOnLocation(BoardComponent object, int x, int y) {
         this.boardMatrix[y][x] = object.getIcon();
     }
+    
+    public void setObjectOnLocation(char charSymbol, int x, int y) {
+        this.boardMatrix[y][x] =charSymbol;
+    }
 }
