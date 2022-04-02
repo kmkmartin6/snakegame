@@ -1,4 +1,4 @@
-package snakegame;
+packagepackage snakegame;
 
 public class AppleElement extends BoardComponent {
 	 
@@ -7,19 +7,18 @@ public class AppleElement extends BoardComponent {
     }
  
     public void addRandomApple(Board screen, AppleElement apple, SnakeElement snake) {
-    	
     	int x;
     	int y;
     	
     	while(true) {
-    		 x = (int) (((Math.random()) * (screen.getBoardWidth() - 1)));
-    		 y = (int) (((Math.random()) * (screen.getBoardHeight() - 1)));
-    		 
-    		 if((snake.isBody(x, y)== false) && (snake.isHead(x, y)==false)) {
-    			 break;
-    		 }
+    		x = (int) (((Math.random()) * (screen.getBoardWidth() - 1)));
+    		y = (int) (((Math.random()) * (screen.getBoardHeight() - 1)));
+    		
+    		if ((snake.isBody(x, y) == false) && (snake.isHead(x, y) == false)) {
+    			break;
+    		}
     	}
-         
+ 
         if(x==0)
         {
             x = 2;
